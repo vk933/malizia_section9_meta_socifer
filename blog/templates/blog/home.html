@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key Insights</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <p class="subtitle">Latest Blog & Articles</p>
+        <h1>Key Insights You<br>Should Know</h1>
+        <a class="view-btn" href="#">View All Articles</a>
+        <div class="cards">
+            {% for article in articles %}
+            <div class="card">
+                <!--<img src="{{ article.image.url }}" alt="Image">  -->
+                <img src="/media/poto.png" alt="Image">
+                <p class="date">{{ article.date }}</p>
+                <h3>{{ article.title }}</h3>
+                <p class="statement"><b>How High-Quality Signage Boosts Your Brand Visibility.</b></p>
+            </div>
+
+            <div class="card">
+                <!--<img src="{{ article.image.url }}" alt="Image">  -->
+                <img src="/media/poto.png" alt="Image">
+                <p class="date">{{ article.date }}</p>
+                <h3>{{ article.title }}</h3>
+                <p class="statement"><b>How LED signs Can Help Grow Your Business.</b></p>
+            </div>
+
+            <div class="card">
+                <!--<img src="{{ article.image.url }}" alt="Image">  -->
+                <img src="/media/poto.png" alt="Image">
+                <p class="date">{{ article.date }}</p>
+                <h3>{{ article.title }}</h3>
+                <p class="statement"><b>This article explores key strategies for business growth.</b></p>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+
+</html>
